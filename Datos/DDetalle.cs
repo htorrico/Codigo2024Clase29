@@ -5,12 +5,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Entidad;
 namespace Datos
 {
     public class DDetalle
     {
-        public void Insertar(int idCabecera, string producto, int cantidad, decimal precio)
+        public void Insertar(EDetalle entidad)
         {
             using (SqlConnection connection = new SqlConnection(Constantes._connectionString))
             {
@@ -18,10 +18,10 @@ namespace Datos
                 using (SqlCommand command = new SqlCommand("InsertarDetalle", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@IdCabecera", idCabecera);
-                    command.Parameters.AddWithValue("@Producto", producto);
-                    command.Parameters.AddWithValue("@Cantidad", cantidad);
-                    command.Parameters.AddWithValue("@Precio", precio);
+                    command.Parameters.AddWithValue("@IdCabecera", entidad.IdCabecera);
+                    command.Parameters.AddWithValue("@Producto", entidad.Producto);
+                    command.Parameters.AddWithValue("@Cantidad", entidad.Cantidad);
+                    command.Parameters.AddWithValue("@Precio", entidad.Precio);
 
                     command.ExecuteNonQuery();
                 }
