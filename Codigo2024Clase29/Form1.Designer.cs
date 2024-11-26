@@ -34,14 +34,14 @@
             dtpFecha = new DateTimePicker();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            label2 = new Label();
-            txtProducto = new TextBox();
-            label3 = new Label();
-            txtCantidad = new TextBox();
+            dgvDetalle = new DataGridView();
+            btnAgregar = new Button();
             label4 = new Label();
             txtPrecio = new TextBox();
-            btnAgregar = new Button();
-            dgvDetalle = new DataGridView();
+            label3 = new Label();
+            txtCantidad = new TextBox();
+            label2 = new Label();
+            txtProducto = new TextBox();
             btnGrabar = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -110,37 +110,24 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos Detalle";
             // 
-            // label2
+            // dgvDetalle
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(35, 53);
-            label2.Name = "label2";
-            label2.Size = new Size(69, 20);
-            label2.TabIndex = 4;
-            label2.Text = "Producto";
+            dgvDetalle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDetalle.Location = new Point(35, 98);
+            dgvDetalle.Name = "dgvDetalle";
+            dgvDetalle.RowHeadersWidth = 51;
+            dgvDetalle.Size = new Size(689, 188);
+            dgvDetalle.TabIndex = 11;
             // 
-            // txtProducto
+            // btnAgregar
             // 
-            txtProducto.Location = new Point(126, 53);
-            txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(215, 27);
-            txtProducto.TabIndex = 5;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(368, 56);
-            label3.Name = "label3";
-            label3.Size = new Size(69, 20);
-            label3.TabIndex = 6;
-            label3.Text = "Cantidad";
-            // 
-            // txtCantidad
-            // 
-            txtCantidad.Location = new Point(445, 50);
-            txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(95, 27);
-            txtCantidad.TabIndex = 7;
+            btnAgregar.Location = new Point(745, 51);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(94, 29);
+            btnAgregar.TabIndex = 10;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // label4
             // 
@@ -158,23 +145,37 @@
             txtPrecio.Size = new Size(95, 27);
             txtPrecio.TabIndex = 9;
             // 
-            // btnAgregar
+            // label3
             // 
-            btnAgregar.Location = new Point(745, 51);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 10;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.Location = new Point(368, 56);
+            label3.Name = "label3";
+            label3.Size = new Size(69, 20);
+            label3.TabIndex = 6;
+            label3.Text = "Cantidad";
             // 
-            // dgvDetalle
+            // txtCantidad
             // 
-            dgvDetalle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDetalle.Location = new Point(35, 98);
-            dgvDetalle.Name = "dgvDetalle";
-            dgvDetalle.RowHeadersWidth = 51;
-            dgvDetalle.Size = new Size(689, 188);
-            dgvDetalle.TabIndex = 11;
+            txtCantidad.Location = new Point(445, 50);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(95, 27);
+            txtCantidad.TabIndex = 7;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(35, 53);
+            label2.Name = "label2";
+            label2.Size = new Size(69, 20);
+            label2.TabIndex = 4;
+            label2.Text = "Producto";
+            // 
+            // txtProducto
+            // 
+            txtProducto.Location = new Point(126, 53);
+            txtProducto.Name = "txtProducto";
+            txtProducto.Size = new Size(215, 27);
+            txtProducto.TabIndex = 5;
             // 
             // btnGrabar
             // 
@@ -184,6 +185,7 @@
             btnGrabar.TabIndex = 6;
             btnGrabar.Text = "Grabar";
             btnGrabar.UseVisualStyleBackColor = true;
+            btnGrabar.Click += btnGrabar_Click;
             // 
             // Form1
             // 
