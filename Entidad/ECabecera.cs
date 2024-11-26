@@ -11,7 +11,7 @@ namespace Entidad
         public int IdCabecera { get; set; }
         public string Cliente { get; set; }
 
-        public string Direccion { get; set; }
+        
 
         public DateTime Fecha { get; set; }
     }
