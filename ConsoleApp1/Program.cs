@@ -4,7 +4,8 @@ using Entidad;
 
 
 
-void Grabar()
+
+void GrabarComputo()
 {
 
     NCabecera nCabecera = new NCabecera();
@@ -38,6 +39,16 @@ void Grabar()
 }
 
 
-Grabar();
+void GrabarFerreteria()
+{
+
+}
+
+void GrabarMercado()
+{
+
+}
+
+GrabarComputo();
 Console.Read();
 
