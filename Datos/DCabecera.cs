@@ -42,10 +42,13 @@ namespace Datos
 
         }
 
-        public  List<ECabecera> Listar(string cliente)
+        //? : Significa que le puedes asignar valores nul
+        //Nulleable
+        public  List<ECabecera> Listar(string cliente,bool? EsActivo)
         {
             SqlCommand command = null; ;
-            SqlParameter sqlParameter = null;            
+            SqlParameter sqlParameter = null;
+            SqlParameter sqlParameter2 = null;
             List<ECabecera> eCabeceras = null;
 
             try
@@ -60,9 +63,13 @@ namespace Datos
                     command.CommandType = CommandType.StoredProcedure;
 
                     sqlParameter = new SqlParameter("@Cliente", SqlDbType.VarChar, 50);
-                    sqlParameter.Value = cliente;           
+                    sqlParameter.Value = cliente;
+                    sqlParameter2 = new SqlParameter("@Activo", SqlDbType.Bit);
+                    sqlParameter2.Value = EsActivo;
 
-                    command.Parameters.Add(sqlParameter);                               
+                    command.Parameters.Add(sqlParameter); 
+                    command.Parameters.Add(sqlParameter2);
+
 
                     SqlDataReader reader = command.ExecuteReader();
 
@@ -102,7 +109,6 @@ namespace Datos
 
 
         }
-
 
     }
 }

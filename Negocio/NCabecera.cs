@@ -30,18 +30,25 @@ namespace Negocio
                 }                        
      
         }
-
-
         public List<ECabecera> Listar(string cliente)
         {
             DCabecera dCabecera = new DCabecera();
             
             List<ECabecera> eCabeceras = new List<ECabecera>();
-
             //Capa de datos trae la lista de cabeceras
-            eCabeceras = dCabecera.Listar(cliente);
+            eCabeceras = dCabecera.Listar(cliente,null);
 
             return eCabeceras;
+        }
+        public List<ECabecera> ListarActivos(string cliente)
+        {
+            DCabecera dCabecera = new DCabecera();     
+            return dCabecera.Listar(cliente,true);
+        }
+        public List<ECabecera> ListarInactivos(string cliente)
+        {
+            DCabecera dCabecera = new DCabecera();
+            return dCabecera.Listar(cliente, false);
         }
 
     }
