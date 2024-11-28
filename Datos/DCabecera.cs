@@ -59,29 +59,32 @@ namespace Datos
                     command = new SqlCommand("ListarCabecera", conexion);
                     command.CommandType = CommandType.StoredProcedure;
 
-
                     sqlParameter = new SqlParameter("@Cliente", SqlDbType.VarChar, 50);
                     sqlParameter.Value = cliente;           
 
-                    command.Parameters.Add(sqlParameter);
-           
+                    command.Parameters.Add(sqlParameter);                               
 
                     SqlDataReader reader = command.ExecuteReader();
 
-
                     while (reader.Read())
                     {
+                        //ECabecera eCabecera = new ECabecera();
+                        //eCabecera.IdCabecera = Convert.ToInt32(reader["IdCabecera"]);
+                        //eCabecera.Cliente = Convert.ToString(reader["Cliente"]);
+                        //eCabecera.Fecha = Convert.ToDateTime(reader["Fecha"]);
+                        //eCabeceras.Add(eCabecera);
+
                         eCabeceras.Add(new ECabecera
                         {
-                            IdCabecera =Convert.ToInt32( reader["IdCabecera"]),
+                            IdCabecera = Convert.ToInt32(reader["IdCabecera"]),
                             Cliente = Convert.ToString(reader["Cliente"]),
-                            Fecha = Convert.ToDateTime(reader["Fecha"]),                         
+                            Fecha = Convert.ToDateTime(reader["Fecha"]),
                         }
                        );
                     }
 
                 }
-                return eCabeceras;
+            
             }
             catch (Exception ex)
             {
@@ -91,10 +94,10 @@ namespace Datos
             finally
             {
                 command = null;
-                sqlParameter = null;   
-                eCabeceras = null;
-
+                sqlParameter = null;                
             }
+
+            return eCabeceras;
 
 
 
