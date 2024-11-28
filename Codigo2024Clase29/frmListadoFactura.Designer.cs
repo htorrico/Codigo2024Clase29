@@ -34,6 +34,10 @@
             txtCliente = new TextBox();
             btnAgregar = new Button();
             dgvDetalle = new DataGridView();
+            IdDetalle = new DataGridViewTextBoxColumn();
+            Producto = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvCabecera).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDetalle).BeginInit();
             SuspendLayout();
@@ -55,7 +59,7 @@
             dgvCabecera.Name = "dgvCabecera";
             dgvCabecera.RowHeadersWidth = 51;
             dgvCabecera.Size = new Size(579, 188);
-            dgvCabecera.TabIndex = 1;            
+            dgvCabecera.TabIndex = 1;
             dgvCabecera.MouseDoubleClick += dgvCabecera_MouseDoubleClick;
             // 
             // label1
@@ -87,11 +91,44 @@
             // dgvDetalle
             // 
             dgvDetalle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDetalle.Columns.AddRange(new DataGridViewColumn[] { IdDetalle, Producto, Cantidad, Precio });
             dgvDetalle.Location = new Point(111, 402);
             dgvDetalle.Name = "dgvDetalle";
             dgvDetalle.RowHeadersWidth = 51;
             dgvDetalle.Size = new Size(579, 188);
             dgvDetalle.TabIndex = 5;
+            // 
+            // IdDetalle
+            // 
+            IdDetalle.DataPropertyName = "IdDetalle";
+            IdDetalle.HeaderText = "IdDetalle";
+            IdDetalle.MinimumWidth = 6;
+            IdDetalle.Name = "IdDetalle";
+            IdDetalle.Width = 125;
+            // 
+            // Producto
+            // 
+            Producto.DataPropertyName = "Producto";
+            Producto.HeaderText = "Producto";
+            Producto.MinimumWidth = 6;
+            Producto.Name = "Producto";
+            Producto.Width = 125;
+            // 
+            // Cantidad
+            // 
+            Cantidad.DataPropertyName = "Cantidad";
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.MinimumWidth = 6;
+            Cantidad.Name = "Cantidad";
+            Cantidad.Width = 125;
+            // 
+            // Precio
+            // 
+            Precio.DataPropertyName = "Precio";
+            Precio.HeaderText = "Precio";
+            Precio.MinimumWidth = 6;
+            Precio.Name = "Precio";
+            Precio.Width = 125;
             // 
             // frmListadoFactura
             // 
@@ -121,5 +158,9 @@
         private TextBox txtCliente;
         private Button btnAgregar;
         private DataGridView dgvDetalle;
+        private DataGridViewTextBoxColumn IdDetalle;
+        private DataGridViewTextBoxColumn Producto;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn Precio;
     }
 }

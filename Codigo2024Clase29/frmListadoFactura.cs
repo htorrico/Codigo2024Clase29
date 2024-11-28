@@ -47,6 +47,7 @@ namespace Codigo2024Clase29
         {
             dgvCabecera.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCabecera.MultiSelect = false;
+            dgvDetalle.AutoGenerateColumns = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

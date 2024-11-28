@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codigo2024Clase29", "Codigo2024Clase29\Codigo2024Clase29.csproj", "{73127AD9-5802-4C01-AD36-09A75C39D25A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codigo2024Clase29", "Codigo2024Clase29\Codigo2024Clase29.csproj", "{73127AD9-5802-4C01-AD36-09A75C39D25A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{4BA31DB7-A5D0-4348-A8EE-A07252B1D6CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datos", "Datos\Datos.csproj", "{4BA31DB7-A5D0-4348-A8EE-A07252B1D6CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{E4D7359E-1807-4796-9462-D95A35D8F6F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Negocio", "Negocio\Negocio.csproj", "{E4D7359E-1807-4796-9462-D95A35D8F6F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{DEA92C2E-8D64-4C35-B710-3F8AC1F37C79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{DEA92C2E-8D64-4C35-B710-3F8AC1F37C79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidad", "Entidad\Entidad.csproj", "{D5124BF4-C289-4B2A-A140-F354BA2626FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidad", "Entidad\Entidad.csproj", "{D5124BF4-C289-4B2A-A140-F354BA2626FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{A8EF4047-2ECA-4C6C-9609-20B8A2DC9AFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D5124BF4-C289-4B2A-A140-F354BA2626FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5124BF4-C289-4B2A-A140-F354BA2626FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5124BF4-C289-4B2A-A140-F354BA2626FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8EF4047-2ECA-4C6C-9609-20B8A2DC9AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8EF4047-2ECA-4C6C-9609-20B8A2DC9AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8EF4047-2ECA-4C6C-9609-20B8A2DC9AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8EF4047-2ECA-4C6C-9609-20B8A2DC9AFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
