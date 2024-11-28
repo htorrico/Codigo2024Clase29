@@ -42,12 +42,64 @@ namespace Datos
 
         }
 
-        public List<ECabecera> Listar(string cliente)
+        public  List<ECabecera> Listar(string cliente)
         {
-            //Usar ADO .NET + DataReader
-            
-            return null;
+            SqlCommand command = null; ;
+            SqlParameter sqlParameter = null;            
+            List<ECabecera> eCabeceras = null;
+
+            try
+            {
+                eCabeceras = new List<ECabecera>();
+
+                using (SqlConnection conexion = new SqlConnection(Constantes._connectionString))
+                {
+                    conexion.Open();
+
+                    command = new SqlCommand("ListarCabecera", conexion);
+                    command.CommandType = CommandType.StoredProcedure;
+
+
+                    sqlParameter = new SqlParameter("@Cliente", SqlDbType.VarChar, 50);
+                    sqlParameter.Value = cliente;           
+
+                    command.Parameters.Add(sqlParameter);
+           
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+
+                    while (reader.Read())
+                    {
+                        eCabeceras.Add(new ECabecera
+                        {
+                            IdCabecera =Convert.ToInt32( reader["IdCabecera"]),
+                            Cliente = Convert.ToString(reader["Cliente"]),
+                            Fecha = Convert.ToDateTime(reader["Fecha"]),                         
+                        }
+                       );
+                    }
+
+                }
+                return eCabeceras;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+            finally
+            {
+                command = null;
+                sqlParameter = null;   
+                eCabeceras = null;
+
+            }
+
+
+
         }
+
 
     }
 }

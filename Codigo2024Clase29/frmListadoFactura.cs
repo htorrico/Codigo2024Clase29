@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace Codigo2024Clase29
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-
+            NCabecera nCabecera = new NCabecera();
+            dgvCabecera.DataSource = nCabecera.Listar(txtCliente.Text);
         }
     }
 }

@@ -32,6 +32,7 @@
             dgvCabecera = new DataGridView();
             label1 = new Label();
             txtCliente = new TextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCabecera).BeginInit();
             SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             dgvCabecera.Location = new Point(111, 151);
             dgvCabecera.Name = "dgvCabecera";
             dgvCabecera.RowHeadersWidth = 51;
-            dgvCabecera.Size = new Size(449, 188);
+            dgvCabecera.Size = new Size(579, 188);
             dgvCabecera.TabIndex = 1;
             // 
             // label1
@@ -70,11 +71,21 @@
             txtCliente.Size = new Size(243, 27);
             txtCliente.TabIndex = 3;
             // 
+            // button1
+            // 
+            button1.Location = new Point(596, 99);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 4;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // frmListadoFactura
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 634);
+            Controls.Add(button1);
             Controls.Add(txtCliente);
             Controls.Add(label1);
             Controls.Add(dgvCabecera);
@@ -92,5 +103,6 @@
         private DataGridView dgvCabecera;
         private Label label1;
         private TextBox txtCliente;
+        private Button button1;
     }
 }
