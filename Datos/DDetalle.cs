@@ -28,5 +28,10 @@ namespace Datos
 
             }
         }
+        public List<EDetalle> Listar(int idCabecera)
+        {
+
+            return null;
+        }
     }
 }

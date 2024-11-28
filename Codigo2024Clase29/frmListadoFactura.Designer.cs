@@ -33,7 +33,9 @@
             label1 = new Label();
             txtCliente = new TextBox();
             btnAgregar = new Button();
+            dgvDetalle = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvCabecera).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDetalle).BeginInit();
             SuspendLayout();
             // 
             // Buscar
@@ -82,11 +84,21 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
+            // dgvDetalle
+            // 
+            dgvDetalle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDetalle.Location = new Point(111, 402);
+            dgvDetalle.Name = "dgvDetalle";
+            dgvDetalle.RowHeadersWidth = 51;
+            dgvDetalle.Size = new Size(579, 188);
+            dgvDetalle.TabIndex = 5;
+            // 
             // frmListadoFactura
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 634);
+            Controls.Add(dgvDetalle);
             Controls.Add(btnAgregar);
             Controls.Add(txtCliente);
             Controls.Add(label1);
@@ -96,6 +108,7 @@
             Text = "frmListadoFactura";
             Load += frmListadoFactura_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCabecera).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDetalle).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -107,5 +120,6 @@
         private Label label1;
         private TextBox txtCliente;
         private Button btnAgregar;
+        private DataGridView dgvDetalle;
     }
 }

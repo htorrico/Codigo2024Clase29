@@ -38,14 +38,9 @@ namespace Codigo2024Clase29
                 // Obtén el valor del ID (supongamos que está en la columna "ID")
                 var id = filaSeleccionada.Cells["IdCabecera"].Value;
 
-                if (id != null)
-                {
-                    MessageBox.Show($"ID seleccionado: {id}");
-                }
-                else
-                {
-                    MessageBox.Show("El ID está vacío.");
-                }
+                //Llamar a la capa de negocio
+                
+           
             }
         }
 
