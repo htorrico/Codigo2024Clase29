@@ -1,4 +1,5 @@
-﻿using Entidad;
+﻿using Datos;
+using Entidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,8 @@ namespace Negocio
     {
         public List<EDetalle> Listar(int idCabecera)
         {
-            //llamar a la capa de datos
-            return null;
+            DDetalle dDetalle = new DDetalle();
+            return dDetalle.Listar(idCabecera);
         }
     }
 }

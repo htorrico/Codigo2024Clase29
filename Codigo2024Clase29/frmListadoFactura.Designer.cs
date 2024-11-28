@@ -55,7 +55,7 @@
             dgvCabecera.Name = "dgvCabecera";
             dgvCabecera.RowHeadersWidth = 51;
             dgvCabecera.Size = new Size(579, 188);
-            dgvCabecera.TabIndex = 1;
+            dgvCabecera.TabIndex = 1;            
             dgvCabecera.MouseDoubleClick += dgvCabecera_MouseDoubleClick;
             // 
             // label1

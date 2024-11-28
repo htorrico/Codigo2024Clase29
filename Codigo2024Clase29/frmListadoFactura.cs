@@ -33,14 +33,13 @@ namespace Codigo2024Clase29
             // Obtén la fila seleccionada
             if (dgvCabecera.SelectedRows.Count > 0)
             {
-                DataGridViewRow filaSeleccionada = dgvCabecera.SelectedRows[0];
+                DataGridViewRow filaSeleccionada = dgvCabecera.SelectedRows[0];                
+                int idCabecera = Convert.ToInt32( filaSeleccionada.Cells["IdCabecera"].Value);
 
-                // Obtén el valor del ID (supongamos que está en la columna "ID")
-                var id = filaSeleccionada.Cells["IdCabecera"].Value;
+                NDetalle nDetalle = new NDetalle();
+                dgvDetalle.DataSource = nDetalle.Listar(idCabecera);
+            
 
-                //Llamar a la capa de negocio
-                
-           
             }
         }
 
@@ -55,5 +54,7 @@ namespace Codigo2024Clase29
             Form1 form1 = new Form1();
             form1.ShowDialog();
         }
+
+       
     }
 }

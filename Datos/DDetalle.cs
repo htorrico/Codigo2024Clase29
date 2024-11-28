@@ -30,8 +30,60 @@ namespace Datos
         }
         public List<EDetalle> Listar(int idCabecera)
         {
+            SqlCommand command = null; ;
+            SqlParameter sqlParameter = null;
+            List<EDetalle> eDetalles = null;
 
-            return null;
+            try
+            {
+                eDetalles = new List<EDetalle>();
+
+                using (SqlConnection conexion = new SqlConnection(Constantes._connectionString))
+                {
+                    conexion.Open();
+
+                    command = new SqlCommand("ListarDetalle", conexion);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    sqlParameter = new SqlParameter("@IdCabecera", SqlDbType.Int);
+                    sqlParameter.Value = idCabecera;
+
+                    command.Parameters.Add(sqlParameter);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                       
+                        eDetalles.Add(new EDetalle
+                        {
+                            IdDetalle = Convert.ToInt32(reader["IdDetalle"]),
+                            IdCabecera = Convert.ToInt32(reader["IdCabecera"]),
+                            Producto = Convert.ToString(reader["Producto"]),
+                            Cantidad = Convert.ToInt32(reader["Cantidad"]),
+                            Precio = Convert.ToDecimal(reader["Precio"])
+                        }
+                       );
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+            finally
+            {
+                command = null;
+                sqlParameter = null;
+            }
+
+            return eDetalles;
+
+
+
         }
     }
 }
