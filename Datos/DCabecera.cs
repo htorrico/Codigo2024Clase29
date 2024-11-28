@@ -42,5 +42,12 @@ namespace Datos
 
         }
 
+        public List<ECabecera> Listar(string cliente)
+        {
+            //Usar ADO .NET + DataReader
+            
+            return null;
+        }
+
     }
 }

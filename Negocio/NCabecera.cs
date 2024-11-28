@@ -30,5 +30,16 @@ namespace Negocio
                 }                        
      
         }
+
+
+        public List<ECabecera> Listar(string cliente)
+        {
+            DCabecera dCabecera = new DCabecera();
+            List<ECabecera> eCabeceras = new List<ECabecera>();
+            eCabeceras = dCabecera.Listar(cliente);
+
+            return eCabeceras;
+        }
+
     }
 }
