@@ -15,5 +15,12 @@ namespace Negocio
             DDetalle dDetalle = new DDetalle();
             return dDetalle.Listar(idCabecera);
         }
+
+        public void Insertar(EDetalle eDetalle )
+        {
+            DDetalle dDetalle = new DDetalle();
+            dDetalle.Insertar(eDetalle);
+
+        }
     }
 }
